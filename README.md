@@ -1,5 +1,3 @@
-# javascript-algorithms-and-challenges
-JavaScript algorithms, coding challenges, and core concept implementations.
 # JavaScript Algorithms and Challenges
 
 This repository contains my implementations of JavaScript algorithms, coding challenges, and core JavaScript concepts.
