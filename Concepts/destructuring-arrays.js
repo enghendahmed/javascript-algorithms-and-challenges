@@ -29,11 +29,13 @@ console.log(thirdColor); // red
 
 // use cases of Destructuring
 // switch variables before Destructuring
-let startDate = "2026 - 10 - 1";
-let endDate = "2026 - 2 - 1";
-//Ternary is meant for expressions (returning values)
-const [start, end] =
-  startDate > endDate
-    ? ([startDate, endDate] = [endDate, startDate])
-    : [startDate, endDate];
-console.log(start, end);
+let firstNum = 10;
+let secondNum = 50;
+let temp = firstNum;
+firstNum = secondNum;
+secondNum = temp;
+console.log(firstNum, secondNum);
+
+// switch variables using Destructuring in just one code line
+[firstNum, secondNum] = [secondNum, firstNum];
+console.log(firstNum, secondNum);
