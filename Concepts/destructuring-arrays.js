@@ -31,11 +31,25 @@ console.log(thirdColor); // red
 // switch variables before Destructuring
 let firstNum = 10;
 let secondNum = 50;
-let temp = firstNum;
+const temp = firstNum;
 firstNum = secondNum;
 secondNum = temp;
-console.log(firstNum, secondNum);
+console.log(firstNum, secondNum); // 50 10
 
-// switch variables using Destructuring in just one code line
+// switch (swap) variables using Destructuring in just one code line
 [firstNum, secondNum] = [secondNum, firstNum];
-console.log(firstNum, secondNum);
+console.log(firstNum, secondNum); // 10 50
+
+// a function return an array then destructring this array into separated variables
+const restaurant = {
+  mainDishes: ["rice", "spagetti", "meat", "chicken"],
+  sideDishes: ["salad", "bread", "fries", "cheese"],
+  order: function (starterIndex, endIndex) {
+    return [this.mainDishes[starterIndex], this.sideDishes[endIndex]];
+  },
+};
+console.log(restaurant.mainDishes); // ["rice", "spagetti", "meat", "chicken"]
+
+const [mainFood, sideFood] = restaurant.order(0, 2); //
+console.log(mainFood, sideFood);
+// nested array
