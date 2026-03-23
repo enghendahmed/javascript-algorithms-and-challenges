@@ -52,10 +52,18 @@ console.log(restaurant.mainDishes); // ["rice", "spagetti", "meat", "chicken"]
 
 const [mainFood, sideFood] = restaurant.order(0, 2);
 console.log(mainFood, sideFood); //rice frise
-// nested array (array inside array)
+
+// nested destructuring , nested array (array inside array)
 const nested = [4, 5, [9, 8]];
 const [a, , b] = nested;
 console.log(a, b); // 4 [9,8]
-// we need to destruct the inside array
+// we need to destruct the inside array , destructuring inside destructuring
 const [c, , [d, e]] = nested;
 console.log(c, d, e); // 4 9 8
+
+// set default values for the variables when we are extracting them , it is useful when we don't know the length of the array , we use this in real world application
+const [i, j, k] = [22, 28];
+console.log(i, j, k); // 22 28 undefined
+
+const [m = 1, n = 1, o = 1] = [22, 28];
+console.log(m, n, o); // 22 28 1
