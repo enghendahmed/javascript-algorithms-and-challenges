@@ -50,6 +50,12 @@ const restaurant = {
 };
 console.log(restaurant.mainDishes); // ["rice", "spagetti", "meat", "chicken"]
 
-const [mainFood, sideFood] = restaurant.order(0, 2); //
-console.log(mainFood, sideFood);
-// nested array
+const [mainFood, sideFood] = restaurant.order(0, 2);
+console.log(mainFood, sideFood); //rice frise
+// nested array (array inside array)
+const nested = [4, 5, [9, 8]];
+const [a, , b] = nested;
+console.log(a, b); // 4 [9,8]
+// we need to destruct the inside array
+const [c, , [d, e]] = nested;
+console.log(c, d, e); // 4 9 8
