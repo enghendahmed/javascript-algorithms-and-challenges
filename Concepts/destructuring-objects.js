@@ -47,3 +47,7 @@ const {
 } = restaurant;
 
 console.log(menuSalad, mainDishes, apitysers);
+
+// we can set a default value as just an Empty Array
+const { sideDishes = [], mainMenu = [] } = restaurant;
+console.log(sideDishes, mainMenu);
