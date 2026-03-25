@@ -34,5 +34,16 @@ console.log(resName, openingHours, categories);
 
 // what if we want the variables names to be different from the property names
 // we need to reference it to the object property , so we will use a colon (:)
+// this is very useful when dealing with third party data like that .
 const { resName: name, openingHours: hours, categories: types } = restaurant;
 console.log(name, hours, types);
+
+// one of the useful use case of destructuring object is when we set Default values for the case that we are trying to read a propert that does not exist on the object to avoid get Undefined
+// Set Default values
+const {
+  menuSalad = ["green salad", "Garlic"],
+  mainMenu: mainDishes,
+  starterMenu: apitysers,
+} = restaurant;
+
+console.log(menuSalad, mainDishes, apitysers);
