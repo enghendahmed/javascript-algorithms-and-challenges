@@ -117,9 +117,18 @@ console.log(open, close); // 11 23
 */
 
 // nested object syntax
+/*
 const {
   fri: { open, close },
 } = openingHours;
 console.log(open, close); // 11 23
+*/
 
 // i shoudn't memorize that but i should back here to use this confusing syntax when i need nested destructuring object.
+
+// we can assign different variables names using colon (:)
+
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c); // 11 23
