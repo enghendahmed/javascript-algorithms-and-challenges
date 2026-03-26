@@ -1,3 +1,13 @@
+/*
+Destructuring Objects :
+1-Extract variables from the object
+2-what if we want the variables names to be different from the property names.
+3-set Default values.
+4-set Default values as just an empty Array.
+5- mutating Variables while Destructuring objects.
+6- nested objects.
+*/
+
 "use strict";
 
 const restaurant = {
@@ -39,7 +49,7 @@ const { resName: name, openingHours: hours, categories: types } = restaurant;
 console.log(name, hours, types);
 
 // one of the useful use case of destructuring object is when we set Default values for the case that we are trying to read a propert that does not exist on the object to avoid get Undefined
-// Set Default values
+// Set Default values to avoid Undefined
 const {
   menuSalad = ["green salad", "Garlic"],
   mainMenu: mainDishes,
@@ -48,6 +58,24 @@ const {
 
 console.log(menuSalad, mainDishes, apitysers);
 
-// we can set a default value as just an Empty Array
+// we can set a default value as just an Empty Array to avoid Undefined
 const { sideDishes = [], mainMenu = [] } = restaurant;
 console.log(sideDishes, mainMenu);
+
+// Set Default values is useful in case of the Data does not exist or the data is Hard Coded in our application like this in our object , But in Real World we get Data from somewhere else like an API . and we might not always know how exactly the data looks like . so it's useful to set Default values like this .
+
+// mutating Variables while Destructuring objects (it is like switching (swapping) variables using Destrucuring arrays )
+
+// mutating Variables , mutate means change.
+let jobTitle = "front-end web developer";
+let candidateAge = 25;
+const candidate = { jobTitle: "Software Engineer", candidateAge: "40" };
+console.log(jobTitle, candidateAge); // front-end web developer 25
+
+/*
+{jobTitle , candidateAge} = candidate;
+console.log(jobTitle,candidateAge); // SyntaxError: Unexpected token '='
+*/
+// to solve this  SyntaxError: Unexpected token '=' , we will wrap all the code line into a parenthesis ( )
+({ jobTitle, candidateAge } = candidate);
+console.log(jobTitle, candidateAge); // Software Engineer 40
