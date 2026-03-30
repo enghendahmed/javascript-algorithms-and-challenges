@@ -5,7 +5,11 @@ Destructuring Objects :
 3-set Default values.
 4-set Default values as just an empty Array.
 5- mutating Variables while Destructuring objects.
-6- nested objects.
+6- Destructuring nested objects.
+7- assign different variables names using colon while Destructuring nested object.
+8- function take an object as an argument.
+9- set default values.
+
 */
 
 "use strict";
@@ -132,3 +136,11 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c); // 11 23
+
+// -------------------------------------------------------
+
+// function take an object as an argument
+// pass object to a function as an argument , and the function will immediately destruct this object.
+// many times in javascript we have functions with a lot of parameters then it can be hard to know the order of the parameters for someone that is using that function , as we say before in object the order does not matter like in array which is index based . so instead of defining the parameters manually in the function we just pass an object into the function as an argument , then function will immediately destruct this object.
+
+// set default values
