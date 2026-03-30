@@ -34,4 +34,21 @@ const GoodNewArr = [1, 2, ...arr];
 console.log(GoodNewArr); // [1,2,3,4,5]
 // second use case : when we pass arguments into functions ( pass multiple elements into fn).
 
-// creating a new food menu
+// we use spread operator when we need an array as individual elements to pass it into a function
+console.log(...GoodNewArr); // 1 2 3 4 5
+// it is as same as it
+console.log(1, 2, 3, 4, 5); // 1 2 3 4 5
+
+// creating a new food  menu
+const newMenu = [...restaurant.mainMenu, "Salad"];
+console.log(newMenu);
+
+// difference between Destructuring and spread operator because they are similar because both get elements out from the array .
+const numbers = [10, 20, 30, 40];
+// Destructuring
+const [a, b, c, d] = numbers;
+console.log(a, b, c, d);
+// spread operator
+console.log(...numbers);
+// the Big difference is that the spread operator takes all the elements out from the array and Does Not create new variables .
+// we use spread operator also in places we need values separated by commas (like inside an array we need to spread another array )
