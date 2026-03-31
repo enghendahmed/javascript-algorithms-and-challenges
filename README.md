@@ -1,8 +1,8 @@
 # JavaScript Algorithms and Challenges
 
-This repository contains my implementations of JavaScript algorithms, coding challenges, and core JavaScript concepts.
-
-The goal of this repository is to practice problem solving and deepen my understanding of modern JavaScript.
+- This repository contains my implementations of JavaScript algorithms, coding challenges, and core JavaScript concepts.
+- The goal of this repository is to practice problem solving and deepen my understanding of modern JavaScript.
+- Consistent practice is the key — this repository grows as I learn.
 
 ## Repository Structure
 
