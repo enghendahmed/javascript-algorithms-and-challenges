@@ -52,3 +52,15 @@ console.log(a, b, c, d);
 console.log(...numbers);
 // the Big difference is that the spread operator takes all the elements out from the array and Does Not create new variables .
 // we use spread operator also in places we need values separated by commas (like inside an array we need to spread another array )
+
+// Two important Use Cases of the spread operator
+// 1- Create Shallow Copies of arrays
+const newCopiedMainMenuArray = [...restaurant.mainMenu];
+console.log(newCopiedMainMenuArray, restaurant.mainMenu);
+
+// 2- merge two arrays together (join two Arrays)
+const mergedStarterAndMainMenuArrays = [
+  ...restaurant.starterMenu,
+  ...restaurant.mainMenu,
+];
+console.log(mergedStarterAndMainMenuArrays);
