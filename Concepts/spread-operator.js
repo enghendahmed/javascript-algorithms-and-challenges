@@ -1,3 +1,38 @@
+/* spread operator :
+
+- Use Cases :
+      1- Expand an array into individual elements separated by coma
+      2- pass arguments into functions ( pass multiple elements into fn).
+      3-Shallow Copy Array. 
+      4-Merge two Arrays.  
+
+-Difference between Destructuring Arrays and Spread Operator. 
+
+- spread operator works on iterables (  Arrays , String ,maps , sets ), iterables are NOT Objects.
+*/
+
+/* in "shallow copy array " 
+What does “shallow” mean?
+
+When we say a shallow copy, we mean:
+
+Only the first level of the array (or object) is copied.
+Anything nested inside is still pointing to the same reference in memory.
+
+so for nested inside :
+-NOT copied deeply, just referenced.
+-Even though you changed copy, original changed too 😬
+
+-Shallow copy = copy the container only
+-Deep copy = copy everything inside it too
+
+example:
+const original = [1, 2, [3, 4]];
+
+[3,4] is nested inside.
+
+*/
+
 "use strict";
 const restaurant = {
   resName: "Classico Italiano",
@@ -64,3 +99,9 @@ const mergedStarterAndMainMenuArrays = [
   ...restaurant.mainMenu,
 ];
 console.log(mergedStarterAndMainMenuArrays);
+
+// Spread Operator works on iterables (string , array , map , set ) But NOT Objects
+// string example using spread operator to Expand elements separated by coms
+const str = "Hend";
+const nameLetters = ["Eng.", ...str, "A", "h", "m", "e", "d"];
+console.log(...nameLetters);
