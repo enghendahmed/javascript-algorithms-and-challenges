@@ -1,4 +1,5 @@
-// first challenge
+"use strict";
+// first challenge section 9 from johnas javascript course on Udemy
 const books = [
   {
     title: "Algorithms",
@@ -232,13 +233,13 @@ console.log(firstBook, secondBook);
 
 console.log("third Book startttttt");
 
-//1.2
+//1.2 skip elements
 //Destructure the books array into a variable called thirdBook. You must skip the first two books.
 const [, , thirdBook] = books;
 console.log(thirdBook); //
 console.log("end of printing third booook");
 
-//1.3
+//1.3 nested Array
 // Below is the nested ratings array that contains two other arrays. Destructure the nested ratings arrays into two variables called rating and ratingsCount. In the result of your destructuring, the ratings variable should store a number 4.19, and the ratingsCount variable should store a number 144584.
 
 const ratings = [
@@ -250,7 +251,7 @@ const [[, rating], [, ratingsCount]] = ratings;
 
 console.log(rating, ratingsCount); // 4.19 144584
 
-// 1.4
+// 1.4 set Default values
 // Below is the ratingStars array. Destructure it into three variables called fiveStarRatings, oneStarRatings and threeStarRatings. Assign the threeStarRatings variable with a default value of 0.
 const ratingStars = [63405, 1808];
 const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
