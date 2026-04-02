@@ -1,7 +1,7 @@
 /* spread operator :
 
 - Use Cases :
-      1- Expand an array into individual elements separated by coma
+      1- Expand an array into individual elements separated by comma
       2- pass arguments into functions ( pass multiple elements into fn).
       3-Shallow Copy Array. 
       4-Merge two Arrays.  
@@ -55,6 +55,10 @@ const restaurant = {
       close: 24,
     },
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`here is your pasta with three ${ing1} , ${ing2} , ${ing3}`);
+  },
 };
 
 //first use case of spread operator , when we want to expand an array into individual elements separated by coma
@@ -101,7 +105,25 @@ const mergedStarterAndMainMenuArrays = [
 console.log(mergedStarterAndMainMenuArrays);
 
 // Spread Operator works on iterables (string , array , map , set ) But NOT Objects
-// string example using spread operator to Expand elements separated by coms
+// string example using spread operator to Expand elements separated by comma
 const str = "Hend";
-const nameLetters = ["Eng.", ...str, "A", "h", "m", "e", "d"];
-console.log(...nameLetters);
+const nameLetters = ["Eng.", ...str, " ", "A", "h", "m", "e", "d"];
+console.log(nameLetters); // [ , , , ]
+console.log(...nameLetters); // Eng. H e n d  A h M e d (without coma)
+console.log(...str);
+
+// Note : keep in mind NOw that we can still Only use the spread operator : when building an array , Or when we pass values into a function .
+
+// what we can't do ? we can't use spread operator to build a string using a template literal .
+// this will Not Work because this place `${}` does Not Expected multiple values separated by comma
+//console.log(`${...str} Ahmed`); Unexpected Token error
+
+// so again multiple values separated by a comma are usually only expected when we pass arguments into a function or when we build a new array.
+
+// function accepts multiple arguments
+const ingredients = [
+  prompt("let's make pasta input the first ingredient"),
+  prompt("let\'s make pasta input the second ingredient"),
+  prompt("let's make pasta input the third ingredient"),
+];
+// function accepts multiple arguments using Spread Operator (real life example)
