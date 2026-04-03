@@ -10,6 +10,7 @@ The spread operator is an ES6 feature that allows you to expand iterable element
 - Pass multiple values as arguments into functions
 - Create a shallow copy of an array
 - Merge two or more arrays
+- objects
 
 ---
 
@@ -42,6 +43,8 @@ The spread operator works only with **iterables**, such as:
 
 > ⚠️ Note: Plain objects are **not iterable**
 > ** spread operator works on iterables ( Arrays , String ,maps , sets ), iterables are NOT Objects**.
+>
+> - since ES 2018 , the spread operator actually also works on objects even though objects are Not iterables.
 
 ---
 

@@ -63,9 +63,13 @@ console.log(newCopiedMainMenuArray, restaurant.mainMenu);
 // shallow copy
 const original = [1, 2, [3, 4]];
 const copy = [...original];
-console.log(original, copy);
+console.log(original, copy); // [ 1, 2, [ 3, 4 ] ] [ 1, 2, [ 3, 4 ] ]
 copy[2][0] = 9;
-console.log(original, copy);
+console.log(original, copy); // [ 1, 2, [ 9, 4 ] ] [ 1, 2, [ 9, 4 ] ]
+
+// shallow copy means that when the copy changed it does not effect the original unless if the change in nested elements
+copy[0] = 10;
+console.log(original, copy); // [ 1, 2, [ 9, 4 ] ] [ 10, 2, [ 9, 4 ] ]
 
 // 2- merge two arrays together (join two Arrays)
 const mergedStarterAndMainMenuArrays = [
@@ -95,7 +99,22 @@ console.log(ingredients); // for example we input these [ 'milk', 'salt', 'pasta
 console.log(...ingredients); // milk salt pasta
 
 // old way before Spread Operator
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]); //here is your pasta with three milk , salt , pasta
 
 // function accepts multiple arguments using Spread Operator (real life example)
-restaurant.orderPasta(...ingredients);
+restaurant.orderPasta(...ingredients); //here is your pasta with three milk , salt , pasta
+
+// objects
+const newRestaurant = { foundedIn: 2026, ...restaurant, founder: "Hend Ahmed" };
+console.log(newRestaurant);
+
+// shallow copy object
+const newCopyiedRestaurant = { ...restaurant };
+console.log(newCopyiedRestaurant);
+
+newCopyiedRestaurant.resName = "Hend";
+console.log(newCopyiedRestaurant.resName); // Hend
+console.log(restaurant.resName); // Classico Italiano
+
+// so changing in the copy does not effect the original
+// shallow copy means that when the copy changed it does not effect the original unless if the change in nested elements
