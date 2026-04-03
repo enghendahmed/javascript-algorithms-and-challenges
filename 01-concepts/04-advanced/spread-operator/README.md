@@ -65,8 +65,10 @@ so for nested inside :
 ```js id="kz7u0f"
 const original = [1, 2, [3, 4]];
 const copy = [...original];
-
+console.log(original, copy);
+copy[2][0] = 9;
+console.log(original, copy);
+```
 
 [3, 4] is a nested array
 Changing it in copy will also affect original 😬
-```

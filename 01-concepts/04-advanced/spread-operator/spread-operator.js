@@ -22,7 +22,7 @@ const restaurant = {
   },
 
   orderPasta: function (ing1, ing2, ing3) {
-    console.log(`here is your pasta with three ${ing1} , ${ing2} , ${ing3}`);
+    console.log(`here is your pasta with three ${ing1} , ${ing2} , ${ing3}`); //here is your pasta with three milk , salt , pasta
   },
 };
 
@@ -60,6 +60,13 @@ console.log(...numbers);
 const newCopiedMainMenuArray = [...restaurant.mainMenu];
 console.log(newCopiedMainMenuArray, restaurant.mainMenu);
 
+// shallow copy
+const original = [1, 2, [3, 4]];
+const copy = [...original];
+console.log(original, copy);
+copy[2][0] = 9;
+console.log(original, copy);
+
 // 2- merge two arrays together (join two Arrays)
 const mergedStarterAndMainMenuArrays = [
   ...restaurant.starterMenu,
@@ -76,9 +83,19 @@ console.log(...nameLetters); // Eng. H e n d  A h M e d (without coma)
 console.log(...str);
 
 // function accepts multiple arguments
+/* this line below to run prompt() function in node.js in terminal after we apply this command ( npm install prompt-sync )
+because prompt() works in browser*/
+const prompt = require("prompt-sync")();
 const ingredients = [
   prompt("let's make pasta input the first ingredient"),
   prompt("let\'s make pasta input the second ingredient"),
   prompt("let's make pasta input the third ingredient"),
 ];
+console.log(ingredients); // for example we input these [ 'milk', 'salt', 'pasta' ]
+console.log(...ingredients); // milk salt pasta
+
+// old way before Spread Operator
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+
 // function accepts multiple arguments using Spread Operator (real life example)
+restaurant.orderPasta(...ingredients);
