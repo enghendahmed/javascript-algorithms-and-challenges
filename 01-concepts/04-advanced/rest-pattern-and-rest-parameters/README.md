@@ -29,9 +29,18 @@ it means if i write ... on the left side of the assignment operator = , so it is
 
 if i write ... on the right side of the assignment operator = , so it is a spread operator.
 
-rest pattern must be the last element , for example :
+Note : rest pattern must be the last element.
+
+### ✅ Correct Example:
 
 ```js
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
-const [a, , b, ...others] = array;
+const [a, , b, ...others] = array; //
+```
+
+### ❌ Wrong Example:
+
+```js
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+const [a, , b, ...others, z] = array;
 ```
