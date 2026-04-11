@@ -46,3 +46,16 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8];
 const [a, , b, ...others, z] = array;
 console.log(a , b , ...others); // SyntaxError: Rest element must be last element
 ```
+
+---
+
+### Use cases of Rest Pattern :
+
+1. in Arrays : Rest Pattern collects the remain elements and put them into an array .
+
+2. in Objects : Rest Pattern collects the remain elements and put them into an object .
+
+3. function :
+   Rest parameters allow a function to accept any number of arguments dynamically, instead of relying on a fixed parameter count.
+
+---
