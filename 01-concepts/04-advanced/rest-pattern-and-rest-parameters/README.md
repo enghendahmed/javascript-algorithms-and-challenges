@@ -35,7 +35,8 @@ Note : rest pattern must be the last element.
 
 ```js
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
-const [a, , b, ...others] = array; //
+const [a, , b, ...others] = array;
+console.log(a, b, ...others); // 1 3 4 5 6 7 8
 ```
 
 ### ❌ Wrong Example:
@@ -43,4 +44,5 @@ const [a, , b, ...others] = array; //
 ```js
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
 const [a, , b, ...others, z] = array;
+console.log(a , b , ...others); // SyntaxError: Rest element must be last element
 ```
