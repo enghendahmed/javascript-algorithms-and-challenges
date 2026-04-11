@@ -1,5 +1,3 @@
-### Destructuring Objects :
-
 ## 📦 Object Destructuring Use Cases :
 
 ### 1. Basic extraction
@@ -40,15 +38,12 @@ const { fri, sat } = weekend;
 const { fri: weekendBegin, sat: weekendEnd } = weekend;
 ```
 
-console.log(weekendBegin, weekendEnd);
-In JavaScript:
-
-👉 Destructuring works ONLY with existing keys
+👉 Destructuring works ONLY with existing keys (names of the properties in the object).
 
 It does NOT:
 
-rename automatically
-guess meaning
+rename automatically<br>
+guess meaning<br>
 create new structure
 
 This pattern:
@@ -61,11 +56,10 @@ This pattern:
 
 means:
 
-> > 💡 **Note:** take `fri` and store it in a new variable called `weekendBegin`
-> > This is called:
-> > 👉 **renaming in destructuring**
+> 💡 **Note:** take `fri` and store it in a new variable called `weekendBegin` This is called:
+> 👉 **renaming in destructuring**
+
+> ### ⚠️ Rule
 >
-> > ### ⚠️ Rule
-> >
-> > Destructuring uses **exact object keys only**  
-> > It does NOT create or guess new names automatically
+> Destructuring uses **exact object keys only**  
+>  It does NOT create or guess new names automatically
