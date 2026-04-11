@@ -56,10 +56,10 @@ This pattern:
 
 means:
 
-> 💡 **Note:** take `fri` and store it in a new variable called `weekendBegin` This is called:
+> take `fri` and store it in a new variable called `weekendBegin` This is called:
 > 👉 **renaming in destructuring**
 
-> ### ⚠️ Rule
->
+### ⚠️ Rule
+
 > Destructuring uses **exact object keys only**  
 >  It does NOT create or guess new names automatically
