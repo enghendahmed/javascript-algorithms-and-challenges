@@ -31,6 +31,7 @@ if i write ... on the right side of the assignment operator = , so it is a sprea
 
 rest pattern must be the last element , for example :
 
-```const array = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 ];
-const [ a ,  , b , ...others] = array;
+```js
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+const [a, , b, ...others] = array;
 ```
