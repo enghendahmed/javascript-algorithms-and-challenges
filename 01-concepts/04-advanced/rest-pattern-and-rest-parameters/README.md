@@ -55,7 +55,7 @@ console.log(a , b , ...others); // SyntaxError: Rest element must be last elemen
 
 2. in Objects : Rest Pattern collects the remain elements and put them into an object .
 
-3. function :
+3. Function :
    Rest parameters allow a function to accept any number of arguments dynamically, instead of relying on a fixed parameter count.
 
 ---
